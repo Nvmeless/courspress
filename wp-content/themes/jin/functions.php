@@ -15,9 +15,12 @@ function customThemeSupport()
 
 function addStyles()
 {
-    wp_register_style('jin', '/wp-content/themes/jin/styles/jin.css');
-
+    wp_register_style('jin', '/wp-content/themes/jin/styles/jin.css', [], 0.5);
+    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', ["jin"], 0.1);
+    wp_register_script('bootstrap_script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
     wp_enqueue_style('jin');
+    wp_enqueue_style('bootstrap');
+    wp_enqueue_script('bootstrap_script');
 }
 
 
